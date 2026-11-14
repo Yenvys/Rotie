@@ -952,13 +952,13 @@ try {
                             </div>
                             <div>
                                 <h4 class="font-serif font-bold text-sm sm:text-base text-rotie-brown">Layanan Pelanggan WhatsApp</h4>
-                                <p class="text-xs sm:text-sm text-rotie-brown/70 mt-0.5">+62 812-3456-7890 (Respon cepat konfirmasi pesanan)</p>
+                                <p class="text-xs sm:text-sm text-rotie-brown/70 mt-0.5">+62 898-1295-171 (Respon cepat konfirmasi pesanan)</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="pt-2">
-                        <a href="https://wa.me/6281234567890?text=Halo%20ROTI%C3%89,%20saya%20ingin%20bertanya%20mengenai%20produk%20roti%20hari%20ini" 
+                        <a href="https://wa.me/628981295171?text=Halo%20ROTI%C3%89,%20saya%20ingin%20bertanya%20mengenai%20produk%20roti%20hari%20ini" 
                            target="_blank" rel="noopener noreferrer"
                            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs tracking-wider uppercase shadow-md hover:shadow-lg transition-all">
                             <span>Hubungi via WhatsApp</span>
@@ -1034,7 +1034,7 @@ try {
                     <ul class="space-y-2 text-xs text-rotie-beige/80">
                         <li>Jl. Siliwangi No. 88, Cirebon</li>
                         <li>Buka: 07:00 – 21:00 WIB</li>
-                        <li>WhatsApp: +62 812-3456-7890</li>
+                        <li>WhatsApp: +62 898-1295-171</li>
                         <li>Email: hello@rotie-bakery.com</li>
                     </ul>
                 </div>
@@ -1199,7 +1199,7 @@ try {
                             No. WhatsApp Aktif *
                         </label>
                         <input type="tel" id="order-hp" name="no_hp" required
-                            placeholder="081234567890"
+                            placeholder="08981295171"
                             class="w-full px-3.5 py-2.5 bg-white border border-rotie-beige rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-rotie-caramel">
                     </div>
 

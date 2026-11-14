@@ -16,7 +16,7 @@ return [
     'APP_ENV' => 'production', // 'development' atau 'production'
     'APP_NAME' => 'ROTIÉ — Artisan Bakery',
     'APP_URL' => 'https://domain-anda.com',
-    'WHATSAPP_NUMBER' => '6281234567890',
+    'WHATSAPP_NUMBER' => '628981295171',
     'ADMIN_REGISTER_KEY' => 'ROTIE_IKMI_2026',
 ];
 

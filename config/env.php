@@ -23,7 +23,7 @@ return [
     // Pengaturan Identitas & Kontak UMKM
     'APP_NAME' => 'ROTIÉ — Artisan Bakery',
     'APP_URL' => 'http://localhost/UAS-41257124-Muhammad_Al_farel',
-    'WHATSAPP_NUMBER' => '6281234567890', // Nomor WhatsApp resmi toko untuk notifikasi pesanan
+    'WHATSAPP_NUMBER' => '628981295171', // Nomor WhatsApp resmi toko untuk notifikasi pesanan
     'ADMIN_REGISTER_KEY' => 'ROTIE_IKMI_2026', // Kunci otorisasi khusus untuk registrasi akun admin baru
 ];
 

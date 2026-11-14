@@ -146,7 +146,7 @@ return [
     'APP_ENV' => 'development', // Ubah ke 'production' saat hosting publik
     'APP_NAME' => 'ROTIÉ — Artisan Bakery',
     'APP_URL' => 'http://localhost/Rotie',
-    'WHATSAPP_NUMBER' => '6281234567890',
+    'WHATSAPP_NUMBER' => '628981295171',
     'ADMIN_REGISTER_KEY' => 'ROTIE_IKMI_2026',
 ];
 ```

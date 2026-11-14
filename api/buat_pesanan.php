@@ -159,7 +159,7 @@ try {
 
     // 6. Susun Pesan WhatsApp Resmi Otomatis
     $configEnv = require __DIR__ . '/../config/env.php';
-    $waNumber = preg_replace('/[^0-9]/', '', $configEnv['WHATSAPP_NUMBER'] ?? '6281234567890');
+    $waNumber = preg_replace('/[^0-9]/', '', $configEnv['WHATSAPP_NUMBER'] ?? '628981295171');
 
     $pesanWA = "Halo ROTIÉ — Artisan Bakery,\n";
     $pesanWA .= "Saya ingin mengonfirmasi pesanan baru dari website:\n\n";
