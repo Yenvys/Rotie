@@ -1,0 +1,294 @@
+/**
+ * ====================================================================
+ * STYLESHEET: ROTIÉ — Artisan Bakery
+ * Editorial Luxury, Glassmorphism, Micro-Interactions & Morph Styles
+ * UAS Pemrograman Web Dasar - STMIK IKMI Cirebon
+ * ====================================================================
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+    --rotie-cream: #F7F2E9;
+    --rotie-warm: #FFFCF7;
+    --rotie-brown: #4A3028;
+    --rotie-chocolate: #2B1D18;
+    --rotie-caramel: #B87945;
+    --rotie-beige: #E8D9C7;
+    --rotie-olive: #85836A;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+body {
+    background-color: var(--rotie-cream);
+    background-image: 
+        radial-gradient(circle at 5% 15%, rgba(184, 121, 69, 0.07) 0%, transparent 35%),
+        radial-gradient(circle at 95% 45%, rgba(133, 131, 106, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 10% 85%, rgba(74, 48, 40, 0.05) 0%, transparent 35%);
+    background-attachment: fixed;
+    color: var(--rotie-chocolate);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom Selection */
+::selection {
+    background-color: var(--rotie-caramel);
+    color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--rotie-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d8c3ae;
+    border-radius: 9999px;
+    border: 2px solid var(--rotie-cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--rotie-caramel);
+}
+
+/* Editorial Serif Headings */
+.font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial {
+    font-family: 'Cormorant Garamond', Garamond, serif;
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, var(--rotie-caramel), #D97706, #E8D9C7);
+    z-index: 9999;
+    width: 0%;
+    transition: width 0.1s ease-out;
+}
+
+/* Glassmorphism & Surfaces */
+.glass-nav {
+    background: rgba(247, 242, 233, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(232, 217, 199, 0.75);
+}
+
+.glass-card {
+    background: rgba(255, 252, 247, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(232, 217, 199, 0.8);
+}
+
+/* Image Reveal & Mask */
+.image-reveal-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-reveal-wrapper img {
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.image-reveal-wrapper:hover img {
+    transform: scale(1.06);
+}
+
+/* Morph Shared Element Simulation */
+.morph-origin {
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease;
+    will-change: transform, opacity;
+}
+
+.morph-active {
+    transform: scale(1.03);
+    z-index: 40;
+}
+
+/* Animated Underline for Links */
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--rotie-caramel);
+    transition: width 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Button Shimmer Effect */
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.28) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transition: all 0.65s ease;
+}
+
+.btn-shimmer:hover::before {
+    left: 150%;
+}
+
+/* Click Ripple Feedback */
+.btn-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple-wave {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: rippleEffect 0.55s ease-out;
+    background-color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Parallax floating bread decoration */
+@keyframes floatSlow {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-12px) rotate(2deg);
+    }
+}
+
+@keyframes floatReverse {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(10px) rotate(-1.5deg);
+    }
+}
+
+.animate-float {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: floatReverse 7s ease-in-out infinite;
+}
+
+/* Cart Badge Bounce */
+@keyframes badgePop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.38); }
+    100% { transform: scale(1); }
+}
+
+.badge-pop {
+    animation: badgePop 0.35s ease-out;
+}
+
+/* Custom Editorial Luxury Cursor (Desktop Only) */
+.custom-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: var(--rotie-caramel);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.custom-cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 34px;
+    border: 1.5px solid var(--rotie-caramel);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.2s ease;
+    opacity: 0.7;
+}
+
+.cursor-hover .custom-cursor-ring {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(184, 121, 69, 0.12);
+    border-color: var(--rotie-brown);
+}
+
+/* Accessibility: Prefers Reduced Motion & Touch Devices */
+@media (pointer: coarse) {
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .animate-float,
+    .animate-float-reverse {
+        animation: none !important;
+    }
+    .custom-cursor-dot,
+    .custom-cursor-ring {
+        display: none !important;
+    }
+}

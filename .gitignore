@@ -1,0 +1,25 @@
+# ====================================================================
+# .gitignore — ROTIÉ Artisan Bakery
+# ====================================================================
+
+# Arsip ZIP & Berkas Kemasan
+*.zip
+*.tar
+*.gz
+*.rar
+
+# Dokumen PRD (Sesuai Permintaan Pengguna)
+PRD*
+*.pdf
+
+# Server Logs (Tetap sertakan .htaccess)
+logs/*.log
+!logs/.htaccess
+
+# Sistem Operasi & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
