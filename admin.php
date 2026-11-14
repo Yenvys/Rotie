@@ -1,4 +1,5 @@
 <?php
+ob_start();
 /**
  * ====================================================================
  * CONTROLLER ROUTER UTAMA DASHBOARD ADMIN (Whitelist Route Protection)
@@ -87,16 +88,12 @@ if (!file_exists($moduleFile)) {
     die("Modul 'modules/{$mod}/{$act}.php' tidak ditemukan di peladen.");
 }
 
-// 4. Modul Download/Export CSV tidak memerlukan layout HTML
-$isRawDownload = ($mod === 'produk' && $act === 'export') || 
-                 ($mod === 'produk' && $act === 'hapus') || 
-                 ($mod === 'kategori' && in_array($act, ['hapus', 'tambah', 'edit']) && $_SERVER['REQUEST_METHOD'] === 'POST' && !isset($_GET['view'])) ||
-                 ($mod === 'transaksi' && $act === 'update_status');
-
-if ($isRawDownload) {
-    require_once $moduleFile;
-    exit;
-}
+// 4. Jalankan modul dengan output buffering
+// Hal ini memungkinkan modul untuk melakukan redirect(), export CSV, atau memproses form POST
+// secara bersih sebelum layout HTML dirender ke peramban.
+ob_start();
+require $moduleFile;
+$moduleContent = ob_get_clean();
 
 // 5. Muat Layout Dashboard Terpadu
 $currentUser = current_user();
@@ -135,10 +132,11 @@ require_once __DIR__ . '/layouts/header.php';
                 </div>
             <?php endif; ?>
 
-            <?php require_once $moduleFile; ?>
+            <?= $moduleContent; ?>
         </main>
     </div>
 </div>
 <?php
 require_once __DIR__ . '/layouts/footer.php';
+ob_end_flush();
 

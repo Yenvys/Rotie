@@ -109,9 +109,19 @@ function json_response(array $data, int $statusCode = 200): void {
 
 /**
  * Pengalihan halaman yang aman (Safe Redirect)
+ * Mengosongkan buffer output agar tidak memicu 'headers already sent'
+ * serta menyediakan fallback JavaScript jika header terlanjur dikirim.
  */
 function redirect(string $url): void {
-    header("Location: {$url}");
+    while (ob_get_level() > 0) {
+        @ob_end_clean();
+    }
+    if (!headers_sent()) {
+        header("Location: {$url}");
+        exit;
+    }
+    echo "<script>window.location.replace(" . json_encode($url) . ");</script>";
+    echo "<noscript><meta http-equiv='refresh' content='0;url=" . htmlspecialchars($url, ENT_QUOTES, 'UTF-8') . "'></noscript>";
     exit;
 }
 
