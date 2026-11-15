@@ -5,6 +5,7 @@
 </p>
 
 <p align="center">
+  <a href="https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link"><img src="https://img.shields.io/badge/Video_Demo-Google_Drive-red?style=for-the-badge&logo=googledrive&logoColor=white" alt="Video Demo"></a>
   <a href="https://github.com/Yenvys/Rotie"><img src="https://img.shields.io/badge/GitHub-Yenvys%2FRotie-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo"></a>
   <img src="https://img.shields.io/badge/PHP-8.0%2B-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
   <img src="https://img.shields.io/badge/MySQL-8.0%2B-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
@@ -18,7 +19,17 @@
 > **Aplikasi Website UMKM Modern & Sistem Manajemen Toko Roti Premium**  
 > Tugas Capstone Ujian Akhir Semester (UAS) Pemrograman Web Dasar — **STMIK IKMI Cirebon**  
 > Dosen Pengampu: **Khaerul Anam, M.Kom**  
-> Pengembang: **Muhammad Al Farel** ([@Yenvys](https://github.com/Yenvys)) — **NIM: 41257124**
+> Pengembang: **Muhammad Al Farel** ([@Yenvys](https://github.com/Yenvys)) — **NIM: 41257124**  
+> 🎬 **Video Demo & Penjelasan Aplikasi:** [Tonton di Google Drive](https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link)
+
+---
+
+## 🎬 Video Demo & Penjelasan Aplikasi
+
+Demonstrasi alur fungsionalitas sistem secara menyeluruh, mencakup antarmuka pelanggan, transaksi keranjang & WhatsApp otomatis, panel dashboard terproteksi, mutasi inventaris, ekspor-impor CSV, hingga pengujian 4 pilar security hardening dapat disaksikan melalui video berikut:
+
+- 📺 **Tautan Google Drive:** [https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link](https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link)
+- 📌 **Akses Langsung:** Klik tautan di atas untuk menonton rekaman walkthrough dan penjelasan fitur aplikasi secara lengkap.
 
 ---
 
@@ -239,6 +250,7 @@ Rotie/
 - **Perguruan Tinggi:** STMIK IKMI Cirebon
 - **Akun GitHub:** [@Yenvys](https://github.com/Yenvys)
 - **Repositori Resmi:** [https://github.com/Yenvys/Rotie](https://github.com/Yenvys/Rotie)
+- **Video Demo & Penjelasan:** [https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link](https://drive.google.com/file/d/1Fdhj68fpFw0AG_-RVA-xz-jX9W9q3Gs_/view?usp=drive_link)
 
 ---
 
